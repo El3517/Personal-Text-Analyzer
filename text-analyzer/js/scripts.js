@@ -20,6 +20,8 @@ const setText = () => {
     data.words = text.match(/a-z/gi);
     data.spaces = text.match(/\s/g);
     data.upperCase = text.match(/[A-Z]/g);
+    data.lowerCase = text.match(/[a-z]/);
+    data.digits = text.match(/\d/g);
     
   }
 }

@@ -20,6 +20,16 @@ Code: spaceCounter(spaces);
 Expected Output: 3
 
 Test : "It should count the number of uppercased letters in a word,sentence or paragraph"
-const upperCase: My NAME Is Caleb"
+const upperCase: "My NAME Is Caleb"
 Code: upperCaseCounter(uppercase);
 Expected Output : 7
+
+Test : "it should count the number of lower cased letters in a word,sentence or paragraph"
+const lowerCase : "my name is caleb"
+Code: lowerCaseCounter(lowerCase);
+Expected Output: 12
+
+Test : "it should count the number of digits in a sentence"
+const digits : "I am 18"
+Code: digitsCounter(digits);
+Expected Output: 2 
