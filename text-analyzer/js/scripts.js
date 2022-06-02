@@ -22,6 +22,7 @@ const setText = () => {
     data.upperCase = text.match(/[A-Z]/g);
     data.lowerCase = text.match(/[a-z]/);
     data.digits = text.match(/\d/g);
+    data.vowels = text.match(/[aeiou]/gi);
     
   }
 }
