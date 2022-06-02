@@ -1,77 +1,25 @@
-// // Business Logic
-function wordCounter(text) {
-  if (text.trim().length === 0) {
-    return 0;
+const textareaEl = $("#text").val();
+let text = 0
+
+const data = () => {
+  words = 0,
+  sentence = 0,
+  upperCase = 0,
+  lowerCase = 0,
+  spaces = 0,
+  digits = 0,
+  vowels = 0,
+  consonants = 0
+};
+
+const setText = () => {
+  text = textareaEl.value;
+
+  if(text != 0){
+    data.sentence = text.match(/\056/g);
+    data.words = text.match(/a-z/gi);
+    data.spaces = text.match(/\s/g);
+    data.upperCase = text.match(/[A-Z]/g);
+    
   }
-  let wordCount = 0;
-  const wordArray = text.split(" ");
-  wordArray.forEach(function(element) {
-    if (!Number(element)) {
-      wordCount++;
-    }
-  });
-  return wordCount;
 }
-
-// // numberOfOccurrencesInText
-// function numberOfOccurrencesInText(word, text) {
-//   if (noInputtedWord(word, text)) {
-//     return 0;
-//   }
-//   const wordArray = text.split(" ");
-//   let wordCount = 0;
-//   wordArray.forEach(function(element) {
-//     if (element.toLowerCase().includes(word.toLowerCase())) {
-//       wordCount++;
-//     }
-//   });
-//   return wordCount;
-// }
-//   // boldPassage
-//   function boldPassage(word, text) {
-//     if ((text.trim().length === 0) || (word.trim().length === 0)) {
-//       return "";
-//     }
-//     let htmlString = "<p>";
-//     let textArray = text.split(" ");
-//     textArray.forEach(function(element, index) {
-//       if (element.toLowerCase().includes(word.toLowerCase())) {
-//         htmlString = htmlString.concat("<b>" + element + "</b>");
-//       } else {
-//         htmlString = htmlString.concat(element);
-//       }
-//       if (index !== (textArray.length - 1)) {
-//         htmlString = htmlString.concat(" ");
-//       }
-//     });
-//     return htmlString + "</p>";
-//   }
-
-
-//   // UI Logic
-//   $(document).ready(function(){
-//     $("form#word-counter").submit(function(event){
-//       event.preventDefault();
-//       const passage = $("#text-passage").val();
-//       const word = $("#word").val();
-//       const wordCount = wordCounter(passage);
-//       const occurrencesOfWord = numberOfOccurrencesInText(word, passage);
-//       $("#total-count").html(wordCount);
-//       $("#selected-count").html(occurrencesOfWord);
-  
-//       // New line of code below.
-//       $("#bolded-passage").html(boldPassage(word, passage));
-//     });
-//   });
-
-// const textarea = $("#text").val();
-// let text = 0
-// function setText(){
-//   text = $("#")
-//   console.log(text.match(/[A-Z]/g));
-// }
-
-// // Utility Logic
-// function noInputtedWord(word, text) {
-//   return ((text.trim().length === 0) || (word.trim().length === 0));
-// }
