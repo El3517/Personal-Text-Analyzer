@@ -23,6 +23,7 @@ const setText = () => {
     data.lowerCase = text.match(/[a-z]/);
     data.digits = text.match(/\d/g);
     data.vowels = text.match(/[aeiou]/gi);
+    data.consonants = text.match(/[bcdfghjklmnpqrstvwxyz]/gi);
     
   }
 }
