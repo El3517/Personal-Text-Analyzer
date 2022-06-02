@@ -1,21 +1,17 @@
 // // Business Logic
-// function wordCounter(text) {
-//   if (text.trim().length === 0) {
-//     return 0;
-//   }
-//   let wordCount = 0;
-//   const wordArray = text.split(" ");
-//   wordArray.forEach(function(element) {
-//     if (!Number(element)) {
-//       wordCount++;
-//     }
-//   });
-//   return wordCount;
-// }
-// // Utility Logic
-// function noInputtedWord(word, text) {
-//   return ((text.trim().length === 0) || (word.trim().length === 0));
-// }
+function wordCounter(text) {
+  if (text.trim().length === 0) {
+    return 0;
+  }
+  let wordCount = 0;
+  const wordArray = text.split(" ");
+  wordArray.forEach(function(element) {
+    if (!Number(element)) {
+      wordCount++;
+    }
+  });
+  return wordCount;
+}
 
 // // numberOfOccurrencesInText
 // function numberOfOccurrencesInText(word, text) {
@@ -67,3 +63,15 @@
 //       $("#bolded-passage").html(boldPassage(word, passage));
 //     });
 //   });
+
+// const textarea = $("#text").val();
+// let text = 0
+// function setText(){
+//   text = $("#")
+//   console.log(text.match(/[A-Z]/g));
+// }
+
+// // Utility Logic
+// function noInputtedWord(word, text) {
+//   return ((text.trim().length === 0) || (word.trim().length === 0));
+// }
